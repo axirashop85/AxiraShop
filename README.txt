@@ -1,4 +1,1 @@
-AXIRASHOP - MODA UOMO E DONNA
-Categorie: Moda, Abbigliamento, Scarpe, Borse, Orologi, Lusso.
-Versione statica HTML/CSS.
-Prima della pubblicazione: sostituire link Amazon, email e completare privacy in base ai servizi usati.
+AxiraShop - versione aggiornata con immagini per categoria e logo dedicato. Contatti: axirashop25@gmail.com
