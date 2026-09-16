@@ -1,103 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accedi o registrati | AxiraShop</title>
-<link rel="stylesheet" href="style.css">
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Account — AxiraShop</title><link rel="stylesheet" href="style.css?v=8"></head>
 <body>
-<header class="site-header">
-  <div class="container">
-    <a class="logo" href="index.html">AXIRASHOP</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="uomo.html">Uomo</a>
-      <a href="donna.html">Donna</a>
-      <a href="moda.html">Moda</a>
-      <a href="abbigliamento.html">Abbigliamento</a>
-      <a href="scarpe.html">Scarpe</a>
-      <a href="borse.html">Borse</a>
-      <a href="orologi.html">Orologi</a>
-      <a href="lusso.html">Lusso</a>
-      <a href="account.html" class="account-link">👤 Accedi</a>
-    </nav>
-  </div>
+<header class="top">
+<a class="logo" href="index.html"><span class="logo-mark">A</span><span><b>AXIRASHOP</b><small>MODA · STILE · VITA</small></span></a>
+<nav><a href="index.html">Home</a><a href="uomo.html">Uomo</a><a href="donna.html">Donna</a><a href="moda.html">Moda</a><a href="abbigliamento.html">Abbigliamento</a><a href="scarpe.html">Scarpe</a><a href="borse.html">Borse</a><a href="orologi.html">Orologi</a><a href="lusso.html">Lusso</a><a href="account.html" aria-current="page" class="account-link">Account</a></nav>
 </header>
-
 <main class="account-wrap">
-  <div class="account-card">
-    <div class="account-tabs">
-      <button class="account-tab active" id="loginTab" type="button">Accedi</button>
-      <button class="account-tab" id="registerTab" type="button">Crea account</button>
-    </div>
+<div class="account-card">
+<div class="account-tabs"><button class="account-tab active" id="loginTab" type="button">Accedi</button><button class="account-tab" id="registerTab" type="button">Registrati</button></div>
 
-    <section id="loginPanel">
-      <h1 class="account-title">Bentornato</h1>
-      <p class="account-subtitle">Accedi al tuo spazio AxiraShop.</p>
-      <form class="account-form" onsubmit="return false;">
-        <div>
-          <label for="loginEmail">Email</label>
-          <input id="loginEmail" type="email" autocomplete="off" placeholder="nome@esempio.it">
-        </div>
-        <div>
-          <label for="loginPassword">Password</label>
-          <div class="password-row">
-            <input id="loginPassword" type="password" autocomplete="off" placeholder="••••••••">
-            <button class="password-toggle" type="button" onclick="togglePassword('loginPassword',this)">Mostra</button>
-          </div>
-        </div>
-        <button class="account-main-btn" type="button">Accedi</button>
-      </form>
-    </section>
+<section id="loginPanel">
+<h1 class="account-title">Bentornato.</h1>
+<p class="account-subtitle">Accedi al tuo account AxiraShop con email e password.</p>
+<form class="account-form" id="loginForm">
+<div><label for="loginEmail">EMAIL</label><input id="loginEmail" type="email" autocomplete="off" placeholder="nome@esempio.it" required></div>
+<div><label for="loginPassword">PASSWORD</label><div class="password-row"><input id="loginPassword" type="password" autocomplete="off" placeholder="La tua password" required><button class="password-toggle" type="button" onclick="togglePassword('loginPassword',this)">Mostra</button></div><a class="forgot-link" id="forgotLink">Hai dimenticato la password?</a></div>
+<button class="account-main-btn" type="submit">Accedi</button>
+</form>
+</section>
 
-    <section id="registerPanel" style="display:none">
-      <h1 class="account-title">Crea il tuo account</h1>
-      <p class="account-subtitle">Un accesso semplice per ritrovare le tue preferenze AxiraShop.</p>
-      <form class="account-form" onsubmit="return false;">
-        <div>
-          <label for="regName">Nome</label>
-          <input id="regName" type="text" autocomplete="off" placeholder="Il tuo nome">
-        </div>
-        <div>
-          <label for="regEmail">Email</label>
-          <input id="regEmail" type="email" autocomplete="off" placeholder="nome@esempio.it">
-        </div>
-        <div>
-          <label for="regPassword">Password</label>
-          <div class="password-row">
-            <input id="regPassword" type="password" autocomplete="off" placeholder="••••••••">
-            <button class="password-toggle" type="button" onclick="togglePassword('regPassword',this)">Mostra</button>
-          </div>
-        </div>
-        <button class="account-main-btn" type="button">Crea account</button>
-      </form>
-    </section>
+<section id="registerPanel" style="display:none">
+<h1 class="account-title">Crea account.</h1>
+<p class="account-subtitle">Entra nel mondo AxiraShop con il tuo indirizzo email.</p>
+<form class="account-form" id="registerForm">
+<div><label for="regName">NOME</label><input id="regName" type="text" autocomplete="off" placeholder="Il tuo nome" required></div>
+<div><label for="regEmail">EMAIL</label><input id="regEmail" type="email" autocomplete="off" placeholder="nome@esempio.it" required></div>
+<div><label for="regPassword">PASSWORD</label><div class="password-row"><input id="regPassword" type="password" autocomplete="off" placeholder="Crea una password" required><button class="password-toggle" type="button" onclick="togglePassword('regPassword',this)">Mostra</button></div></div>
+<button class="account-main-btn" type="submit">Crea account</button>
+</form>
+</section>
 
-    <div class="account-divider"><span>oppure</span></div>
-    <div class="social-buttons">
-      <button class="social-btn" type="button"> &nbsp; Continua con Apple</button>
-      <button class="social-btn" type="button">G &nbsp; Continua con Google</button>
-      <button class="social-btn" type="button">⊞ &nbsp; Continua con Microsoft</button>
-    </div>
-    <p class="account-note">Accesso e registrazione sono presentati come interfaccia del sito: questa versione non invia né salva credenziali.</p>
-  </div>
+<section id="resetPanel" style="display:none">
+<a class="reset-back" id="resetBack">← Torna all'accesso</a>
+<h1 class="account-title">Reimposta password.</h1>
+<p class="account-subtitle">Inserisci l'email associata al tuo account AxiraShop.</p>
+<div class="account-message" id="resetMessage"></div>
+<form class="account-form" id="resetForm">
+<div><label for="resetEmail">EMAIL</label><input id="resetEmail" type="email" autocomplete="off" placeholder="nome@esempio.it" required></div>
+<button class="account-main-btn" type="submit">Continua</button>
+</form>
+</section>
+
+<div class="account-divider"></div>
+<p class="account-note">Questa è l'interfaccia account di AxiraShop. In questa versione dimostrativa nessuna credenziale viene salvata o inviata.</p>
+</div>
 </main>
-
+<footer><div class="foot"><div><h3>AXIRASHOP</h3><p>Moda, stile e accessori scelti per Uomo e Donna.</p></div><div><h3>Esplora</h3><a href="uomo.html">Uomo</a><br><a href="donna.html">Donna</a><br><a href="scarpe.html">Scarpe</a><br><a href="borse.html">Borse</a></div><div><h3>Contatti</h3><a class="mail" href="mailto:axirashop25@gmail.com">axirashop25@gmail.com</a></div></div><div class="copy">© 2026 AxiraShop · <a href="privacy.html">Privacy</a> · <a href="disclosure.html">Disclosure</a></div></footer>
 <script>
-const loginTab=document.getElementById('loginTab');
-const registerTab=document.getElementById('registerTab');
-const loginPanel=document.getElementById('loginPanel');
-const registerPanel=document.getElementById('registerPanel');
-
-loginTab.onclick=()=>{loginTab.classList.add('active');registerTab.classList.remove('active');loginPanel.style.display='block';registerPanel.style.display='none';};
-registerTab.onclick=()=>{registerTab.classList.add('active');loginTab.classList.remove('active');registerPanel.style.display='block';loginPanel.style.display='none';};
-
-function togglePassword(id,btn){
-  const input=document.getElementById(id);
-  input.type=input.type==='password'?'text':'password';
-  btn.textContent=input.type==='password'?'Mostra':'Nascondi';
-}
+const loginTab=document.getElementById('loginTab'),registerTab=document.getElementById('registerTab');
+const loginPanel=document.getElementById('loginPanel'),registerPanel=document.getElementById('registerPanel'),resetPanel=document.getElementById('resetPanel');
+function showLogin(){loginTab.classList.add('active');registerTab.classList.remove('active');loginPanel.style.display='block';registerPanel.style.display='none';resetPanel.style.display='none';}
+function showRegister(){registerTab.classList.add('active');loginTab.classList.remove('active');registerPanel.style.display='block';loginPanel.style.display='none';resetPanel.style.display='none';}
+loginTab.onclick=showLogin; registerTab.onclick=showRegister;
+document.getElementById('forgotLink').onclick=()=>{loginPanel.style.display='none';registerPanel.style.display='none';resetPanel.style.display='block';loginTab.classList.remove('active');registerTab.classList.remove('active');};
+document.getElementById('resetBack').onclick=showLogin;
+function togglePassword(id,btn){const i=document.getElementById(id);i.type=i.type==='password'?'text':'password';btn.textContent=i.type==='password'?'Mostra':'Nascondi';}
+document.getElementById('loginForm').onsubmit=e=>{e.preventDefault();};
+document.getElementById('registerForm').onsubmit=e=>{e.preventDefault();};
+document.getElementById('resetForm').onsubmit=e=>{e.preventDefault();const m=document.getElementById('resetMessage');m.style.display='block';m.textContent='Richiesta elaborata. In questa versione non viene inviata alcuna email.';};
 </script>
-</body>
-</html>
+</body></html>
